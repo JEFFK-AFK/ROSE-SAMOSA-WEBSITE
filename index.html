@@ -9,7 +9,6 @@
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom right, #fffdf5, #ffeabf);
@@ -99,47 +98,44 @@
     }
 
     .reviews, .contact {
-      margin: 60px auto;
       max-width: 800px;
-      padding: 0 20px;
-    }
-
-    .review {
-      background: white;
+      margin: 60px auto;
       padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .contact form {
       background: white;
-      padding: 30px;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
-    .contact input, .contact textarea {
-      width: 100%;
+    .review {
+      margin-bottom: 20px;
+    }
+
+    .review p {
+      margin: 5px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
       padding: 12px;
-      margin: 10px 0;
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 16px;
     }
 
-    .contact button {
-      background: #f39c12;
-      color: white;
-      padding: 14px 24px;
-      border: none;
-      font-size: 18px;
-      border-radius: 10px;
-      cursor: pointer;
+    .message {
+      font-size: 16px;
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
-    .contact button:hover {
-      background: #e08e0b;
+    .error {
+      color: red;
     }
 
     footer {
@@ -171,6 +167,7 @@
   </style>
 </head>
 <body>
+
   <div class="preloader">
     <dotlottie-player src="https://lottie.host/5cdab6a5-c27e-41d7-9d6e-42c0e26a6876/8e8zBaVuyI.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
   </div>
@@ -186,13 +183,11 @@
       <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
       <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
     </div>
-
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="200">
       <h2>Potato Samosa – Ksh 15</h2>
       <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
       <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
     </div>
-
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="300">
       <h2>Ndengu Samosa – Ksh 15</h2>
       <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
@@ -203,28 +198,28 @@
   <div class="reviews" data-aos="fade-up">
     <h2>What Our Customers Say</h2>
     <div class="review">
-      <strong>Mary K.</strong>
-      <p>“Absolutely delicious! The beef samosas are my favorite. Fast delivery too!”</p>
+      <p>"Best samosas in Nairobi! Crispy, tasty, and always fresh!"</p>
+      <strong>- James K.</strong>
     </div>
     <div class="review">
-      <strong>James O.</strong>
-      <p>“Crispy, flavorful, and affordable. Will definitely order again!”</p>
+      <p>"I order every week. Never disappoints. Highly recommended."</p>
+      <strong>- Mercy W.</strong>
     </div>
     <div class="review">
-      <strong>Lucy W.</strong>
-      <p>“Best samosas in Nairobi. The potato ones are addictive!”</p>
+      <p>"Affordable and delicious. Perfect for events!"</p>
+      <strong>- Brian N.</strong>
     </div>
   </div>
 
-  <div class="contact" data-aos="fade-up" id="contact">
+  <div class="contact" data-aos="fade-up" data-aos-delay="200">
     <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
+    <form id="contactForm" action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
-      <button type="submit">Send Message</button>
+      <button class="btn" type="submit">Send Message</button>
+      <div class="message" id="formMessage"></div>
     </form>
   </div>
 
@@ -248,6 +243,24 @@
       scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
     scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const form = document.getElementById("contactForm");
+    const messageBox = document.getElementById("formMessage");
+
+    form.addEventListener("submit", function(e) {
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        e.preventDefault();
+        messageBox.textContent = "Please fill in all fields.";
+        messageBox.className = "message error";
+      } else {
+        messageBox.textContent = "Sending...";
+        messageBox.className = "message";
+      }
+    });
   </script>
 </body>
   </html>
