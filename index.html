@@ -1,176 +1,160 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }body {
-  font-family: 'Nunito', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #fffdf5, #ffeabf);
-  color: #333;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+      color: #333;
+      text-align: center;
+    }
 
-.nav {
-  text-align: center;
-  margin: 20px;
-}
+    header {
+      background: #f39c12;
+      color: white;
+      padding: 20px;
+    }
 
-.nav a {
-  text-decoration: none;
-  color: white;
-  background: #f39c12;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 10px;
-  font-weight: bold;
-}
+    header h1 {
+      font-size: 40px;
+    }
 
-.nav a:hover {
-  background: #e67e22;
-}
+    .section {
+      padding: 60px 20px;
+      margin: 20px 0;
+    }
 
-.home {
-  background: url('https://images.unsplash.com/photo-1612367831650-2df1c2c3b165?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 140px 20px;
-}
+    .section h2 {
+      font-size: 30px;
+      color: #333;
+    }
 
-.home h1 {
-  font-size: 48px;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
+    .section p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
 
-.home p {
-  font-size: 20px;
-  margin: 20px 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #f39c12;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
 
-.page {
-  padding: 60px 20px;
-}
+    .button:hover {
+      background-color: #e67e22;
+    }
 
-.menu-item {
-  background: white;
-  border-radius: 12px;
-  margin: 30px auto;
-  padding: 25px;
-  max-width: 800px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
-}
+    .menu-item {
+      background: white;
+      border-radius: 12px;
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 700px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-.menu-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
 
-form {
-  max-width: 600px;
-  margin: auto;
-}
+    .btn-order {
+      background: #25D366;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
 
-input, textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
+    .btn-order:hover {
+      background: #20b858;
+    }
 
-input[type="submit"] {
-  background: #f39c12;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+    .back-home {
+      margin-top: 30px;
+    }
 
-input[type="submit"]:hover {
-  background: #e67e22;
-}
+    .back-home a {
+      color: #f39c12;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.btn-back {
-  display: block;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.btn-back a {
-  text-decoration: none;
-  color: #fff;
-  background: #25D366;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
+    .back-home a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <div id="home-page" class="home">
+
+  <!-- Header Section -->
+  <header>
     <h1>Welcome to Rose Samosas</h1>
     <p>Delicious, handmade samosas delivered fresh to your door</p>
-    <div class="nav">
-      <a href="menu.html">See Our Menu</a>
-      <a href="contact.html">Contact Us</a>
+    <a href="#menu" class="button">See Our Menu</a>
+    <a href="#contact" class="button">Contact Us</a>
+  </header>
+
+  <!-- Home Section -->
+  <div class="section" id="home">
+    <h2>Welcome to Rose Samosas</h2>
+    <p>Your favorite samosas made fresh and delivered right to you!</p>
+    <a href="#menu" class="button">See Our Menu</a>
+    <a href="#contact" class="button">Contact Us</a>
+  </div>
+
+  <!-- Menu Section -->
+  <div class="section" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <h3>Beef Samosa – Ksh 30</h3>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
+      <a class="btn-order" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
+    </div>
+    <div class="menu-item">
+      <h3>Potato Samosa – Ksh 15</h3>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
+      <a class="btn-order" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
+    </div>
+    <div class="menu-item">
+      <h3>Ndengu Samosa – Ksh 15</h3>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
+      <a class="btn-order" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
+    </div>
+    <div class="back-home">
+      <a href="#home">← Back to Home</a>
     </div>
   </div>
-</body>
-</html><!-- menu.html --><!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Menu - Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <style>/* same style here */</style>
-</head>
-<body>
-  <section class="page">
-    <div class="menu-item">
-      <h2>Beef Samosa – Ksh 30</h2>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
-    </div>
-    <div class="menu-item">
-      <h2>Potato Samosa – Ksh 15</h2>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
-    </div>
-    <div class="menu-item">
-      <h2>Ndengu Samosa – Ksh 15</h2>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
-    </div>
-    <div class="btn-back">
-      <a href="index.html">Back to Home</a>
-    </div>
-  </section>
-</body>
-</html><!-- contact.html --><!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Contact - Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <style>/* same style here */</style>
-</head>
-<body>
-  <section class="page">
-    <h2 style="text-align:center;">Contact Us</h2>
+
+  <!-- Contact Section -->
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
     <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required /><br>
+      <input type="email" name="email" placeholder="Your Email" required /><br>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
       <input type="hidden" name="_captcha" value="false">
       <input type="submit" value="Send Message" />
     </form>
-    <div class="btn-back">
-      <a href="index.html">Back to Home</a>
+    <div class="back-home">
+      <a href="#home">← Back to Home</a>
     </div>
-  </section>
+  </div>
+
 </body>
-        </html>
+</html>
