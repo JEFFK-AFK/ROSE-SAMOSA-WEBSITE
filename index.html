@@ -1,14 +1,20 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     * {
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -17,142 +23,211 @@
       color: #333;
       overflow-x: hidden;
     }
-    .section {
-      display: none;
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
     }
-    .active {
-      display: block;
+
+    .preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #fffdf5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
+
+    section {
+      padding: 60px 20px;
+    }
+
     .home {
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .home h1 {
-      font-size: 60px;
-      color: #f39c12;
-      margin-bottom: 20px;
-    }
-    .home p {
-      font-size: 22px;
-    }
-    .nav-buttons {
-      margin-top: 40px;
-    }
-    .nav-buttons button {
-      padding: 15px 25px;
-      margin: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      background-color: #25D366;
+      background: url('https://images.unsplash.com/photo-1612367831650-2df1c2c3b165?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: white;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
+      text-align: center;
+      padding: 120px 20px;
     }
-    .nav-buttons button:hover {
-      background-color: #20b858;
+
+    .home h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .home p {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .home a {
+      font-family: 'Montserrat', sans-serif;
+      background: #f39c12;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: background 0.3s, transform 0.2s;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .home a:hover {
+      background: #e67e22;
       transform: scale(1.05);
     }
-    header, .menu, .contact, footer {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    header h2 {
-      font-size: 40px;
-      margin: 0;
-    }
+
     .menu-item {
       background: white;
-      border-radius: 12px;
-      margin: 30px 0;
+      border-radius: 16px;
+      margin: 30px auto;
       padding: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      max-width: 800px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .menu-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .menu-item h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
     .menu-item img {
       width: 100%;
       border-radius: 10px;
+      margin-top: 15px;
     }
+
     .btn {
+      font-family: 'Montserrat', sans-serif;
       background: #25D366;
       color: white;
-      padding: 10px 20px;
+      padding: 14px 28px;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-size: 17px;
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
+      transition: 0.3s;
     }
-    form input, form textarea {
+
+    .btn:hover {
+      background: #20b858;
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 15px;
       margin: 10px 0;
-      border-radius: 6px;
       border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Roboto', sans-serif;
     }
-    form button {
+
+    input[type="submit"] {
       background: #f39c12;
       color: white;
-      padding: 12px 20px;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
       cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    input[type="submit"]:hover {
+      background: #e67e22;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      padding: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      .home h1 {
+        font-size: 2.2rem;
+      }
+
+      .home p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
-<body>  <div class="section home active" id="home">
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <dotlottie-player src="https://lottie.host/5cdab6a5-c27e-41d7-9d6e-42c0e26a6876/8e8zBaVuyI.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
     <h1>Welcome to Rose Samosas</h1>
-    <p>Delicious handmade samosas delivered with love!</p>
-    <div class="nav-buttons">
-      <button onclick="showSection('menu')">View Menu</button>
-      <button onclick="showSection('contact')">Contact Us</button>
-    </div>
-  </div>  <div class="section menu" id="menu">
-    <header data-aos="fade-down">
-      <h2>Our Menu</h2>
-    </header>
+    <p>Delicious, handmade samosas delivered fresh to your door</p>
+    <a href="#menu">See Our Menu</a>
+    <a href="#contact">Contact Us</a>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="100">
-      <h3>Beef Samosa – Ksh 30</h3>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa" />
-      <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas">Order Now</a>
+      <h2>Beef Samosa – Ksh 30</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
+      <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
     </div>
+
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="200">
-      <h3>Potato Samosa – Ksh 15</h3>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa" />
-      <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas">Order Now</a>
+      <h2>Potato Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
+      <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
     </div>
+
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="300">
-      <h3>Ndengu Samosa – Ksh 15</h3>
-      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa" />
-      <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas">Order Now</a>
+      <h2>Ndengu Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
+      <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
     </div>
-    <div class="nav-buttons">
-      <button onclick="showSection('home')">Back Home</button>
-    </div>
-  </div>  <div class="section contact" id="contact">
-    <header data-aos="fade-up">
-      <h2>Contact Us</h2>
-    </header>
-    <form action="https://formspree.io/f/your-form-id" method="POST" data-aos="fade-up">
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 style="text-align:center;" data-aos="fade-up">Contact Us</h2>
+    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="submit" value="Send Message" />
     </form>
-    <div class="nav-buttons">
-      <button onclick="showSection('home')">Back Home</button>
-    </div>
-  </div>  <footer data-aos="fade-up">
+  </section>
+
+  <footer>
     <p>&copy; 2025 Rose Samosas. All rights reserved.</p>
-  </footer>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
     AOS.init();
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-      window.scrollTo(0, 0);
-    }
-  </script></body>
-      </html>
+    window.addEventListener("load", () => {
+      document.querySelector(".preloader").style.display = "none";
+    });
+  </script>
+</body>
+  </html>
