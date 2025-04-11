@@ -2,193 +2,175 @@
 <head>
   <meta charset="UTF-8" />
   <title>Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
     }body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom right, #fffaf0, #ffe5b4);
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #fffdf5, #ffeabf);
   color: #333;
   overflow-x: hidden;
 }
 
-nav {
-  background: #ff9f1c;
-  padding: 15px 30px;
+.nav {
   text-align: center;
+  margin: 20px;
 }
 
-nav a {
-  color: white;
+.nav a {
   text-decoration: none;
-  font-weight: 600;
-  margin: 0 15px;
-  font-size: 16px;
-  transition: color 0.3s;
+  color: white;
+  background: #f39c12;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-nav a:hover {
-  color: #333;
-}
-
-.section {
-  padding: 60px 20px;
-  text-align: center;
+.nav a:hover {
+  background: #e67e22;
 }
 
 .home {
-  height: 100vh;
   background: url('https://images.unsplash.com/photo-1612367831650-2df1c2c3b165?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 140px 20px;
 }
 
 .home h1 {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .home p {
   font-size: 20px;
-  margin-bottom: 30px;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-.home a {
-  background: #ff9f1c;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 8px;
-  margin: 10px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.home a:hover {
-  background: #ff8500;
+.page {
+  padding: 60px 20px;
 }
 
 .menu-item {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  padding: 20px;
+  border-radius: 12px;
   margin: 30px auto;
-  max-width: 700px;
+  padding: 25px;
+  max-width: 800px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: left;
-}
-
-.menu-item h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
 }
 
 .menu-item img {
   width: 100%;
   border-radius: 10px;
-  margin: 15px 0;
-}
-
-.btn {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
   margin-top: 10px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #1da851;
 }
 
 form {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
 input, textarea {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
 }
 
 input[type="submit"] {
-  background: #ff9f1c;
+  background: #f39c12;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background: #ff8500;
+  background: #e67e22;
 }
 
-footer {
+.btn-back {
+  display: block;
   text-align: center;
-  font-size: 14px;
-  color: #666;
-  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.btn-back a {
+  text-decoration: none;
+  color: #fff;
+  background: #25D366;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#menu">Menu</a>
-    <a href="#contact">Contact</a>
-  </nav>  <!-- Home Section -->  <section class="home" id="home">
-    <h1 data-aos="fade-up">Welcome to Rose Samosas</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Delicious, handmade samosas delivered fresh to your door</p>
-    <a href="#menu" data-aos="zoom-in">See Our Menu</a>
-    <a href="#contact" data-aos="zoom-in" data-aos-delay="100">Contact Us</a>
-  </section>  <!-- Menu Section -->  <section class="section" id="menu">
-    <h2 data-aos="fade-up">Our Menu</h2><div class="menu-item" data-aos="fade-up" data-aos-delay="100">
-  <h2>Beef Samosa – Ksh 30</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
-  <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
-</div>
-
-<div class="menu-item" data-aos="fade-up" data-aos-delay="200">
-  <h2>Potato Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
-  <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
-</div>
-
-<div class="menu-item" data-aos="fade-up" data-aos-delay="300">
-  <h2>Ndengu Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
-  <a class="btn" href="https://wa.me/254795818644">Order Now on WhatsApp</a>
-</div>
-
-  </section>  <!-- Contact Section -->  <section class="section" id="contact">
-    <h2 data-aos="fade-up">Contact Us</h2>
-    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
+  <div id="home-page" class="home">
+    <h1>Welcome to Rose Samosas</h1>
+    <p>Delicious, handmade samosas delivered fresh to your door</p>
+    <div class="nav">
+      <a href="menu.html">See Our Menu</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</body>
+</html><!-- menu.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu - Rose Samosas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>/* same style here */</style>
+</head>
+<body>
+  <section class="page">
+    <div class="menu-item">
+      <h2>Beef Samosa – Ksh 30</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
+    </div>
+    <div class="menu-item">
+      <h2>Potato Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
+    </div>
+    <div class="menu-item">
+      <h2>Ndengu Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
+    </div>
+    <div class="btn-back">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </section>
+</body>
+</html><!-- contact.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Rose Samosas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>/* same style here */</style>
+</head>
+<body>
+  <section class="page">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <input type="hidden" name="_captcha" value="false">
       <input type="submit" value="Send Message" />
     </form>
-  </section>  <footer>
-    <p>&copy; 2025 Rose Samosas. All rights reserved.</p>
-  </footer>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
-    AOS.init();
-  </script></body>
+    <div class="btn-back">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </section>
+</body>
         </html>
