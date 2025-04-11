@@ -1,255 +1,206 @@
-[Project Folder Structure]
-
-rose-samosas-website/ ├── index.html ├── menu.html └── contact.html
-
-
----
-
-[index.html]
-
-<!DOCTYPE html><html lang="en">
+<!-- index.html --><!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Rose Samosas - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delicious handmade samosas in Nairobi. Order beef, potato, and ndengu samosas from Rose Samosas.">
+  <title>Rose Samosas | Home</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff8f0;
-  color: #333;
-}
-
-.home {
-  background: #f39c12;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home h1 {
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-
-.home p {
-  font-size: 24px;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.home a {
-  background: white;
-  color: #f39c12;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 0.3s;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.home a:hover {
-  background: #ffe0a3;
-  transform: scale(1.05);
-}
-
-footer {
-  text-align: center;
-  font-size: 14px;
-  color: #999;
-  padding: 40px 0;
-}
-
-  </style>
-</head>
-<body>  <section class="home" id="home">
-    <h1>Welcome to Rose Samosas</h1>
-    <p>Delicious, handmade samosas delivered fresh to your door</p>
-    <a href="menu.html">See Our Menu</a>
-    <a href="contact.html">Contact Us</a>
-  </section>  <footer>
-    <p>&copy; 2025 Rose Samosas. All rights reserved.</p>
-  </footer></body>
-</html>
----
-
-[menu.html]
-
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Menu - Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fffefc;
-      color: #333;
-    }.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.menu-item {
-  background: white;
-  border-radius: 12px;
-  margin: 30px 0;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.menu-item img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.btn {
-  background: #25D366;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 15px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #20b858;
-}
-
-.back-home {
-  display: block;
-  margin: 20px auto;
-  width: fit-content;
-  background: #f39c12;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-h2 {
-  margin-top: 0;
-}
-
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #ffa726;
+      color: white;
+      overflow-x: hidden;
+      transition: opacity 0.5s ease-in-out;
+    }
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 100px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    a.button {
+      display: inline-block;
+      background: #fff;
+      color: #ffa726;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background: #fefefe;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 30px 10px;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a class="back-home" href="index.html">Back to Home</a><div class="menu-item">
-  <h2>Beef Samosa – Ksh 30</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa" />
-  <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
-</div>
-
-<div class="menu-item">
-  <h2>Potato Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa" />
-  <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
-</div>
-
-<div class="menu-item">
-  <h2>Ndengu Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa" />
-  <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
-</div>
-
-  </div>
-</body>
-</html>
----
-
-[contact.html]
-
-<!DOCTYPE html><html lang="en">
+  <div class="container" data-aos="fade-down">
+    <h1>Welcome to Rose Samosas</h1>
+    <p>Delicious, handmade samosas delivered fresh in Nairobi</p>
+    <a class="button" href="menu.html">See Our Menu</a>
+    <a class="button" href="contact.html">Contact Us</a>
+  </div>  <footer>&copy; 2025 Rose Samosas. All rights reserved.</footer>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
+    AOS.init();
+  </script></body>
+</html><!-- menu.html --><!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact - Rose Samosas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Rose Samosas</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fdfaf5;
+      background: #fffdf5;
       color: #333;
-    }.container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 20px;
-}
-
-h2 {
-  text-align: center;
-}
-
-form {
-  margin-top: 30px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-input[type="submit"] {
-  background: #f39c12;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background: #e67e22;
-}
-
-.back-home {
-  display: block;
-  margin: 20px auto;
-  width: fit-content;
-  background: #f39c12;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 50px;
+    }
+    .menu-item {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      background: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .back {
+      display: block;
+      text-align: center;
+      margin: 40px;
+      text-decoration: none;
+      color: #ffa726;
+      font-weight: bold;
+    }
   </style>
 </head>
-<body>  <div class="container">
-    <a class="back-home" href="index.html">Back to Home</a>
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="submit" value="Send Message" />
-    </form>
-  </div></body>
+<body>
+  <h2 data-aos="fade-up">Our Menu</h2>
+  <div class="menu-item" data-aos="zoom-in">
+    <h3>Beef Samosa – Ksh 30</h3>
+    <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
+    <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
+  </div>
+  <div class="menu-item" data-aos="zoom-in">
+    <h3>Potato Samosa – Ksh 15</h3>
+    <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
+    <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
+  </div>
+  <div class="menu-item" data-aos="zoom-in">
+    <h3>Ndengu Samosa – Ksh 15</h3>
+    <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
+    <a class="btn" href="https://wa.me/254795818644">Order on WhatsApp</a>
+  </div>
+  <a class="back" href="index.html">Back to Home</a>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>AOS.init();</script></body>
+</html><!-- contact.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Rose Samosas</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #fefefe;
+      padding: 40px 20px;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background: #ffa726;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover {
+      background: #fb8c00;
+    }
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #ffa726;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2 data-aos="fade-up">Contact Us</h2>
+  <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="submit" value="Send Message">
+  </form><a class="back" href="index.html">Back to Home</a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>AOS.init();</script></body>
     </html>
