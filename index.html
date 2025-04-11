@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Rose Samosas</title>
@@ -7,149 +8,235 @@
   <style>
     * {
       box-sizing: border-box;
-    }body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, #fffdf5, #ffeabf);
-  color: #333;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+    }
 
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #fffdf5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #fffdf5, #ffeabf);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-header {
-  background: url('https://images.unsplash.com/photo-1612367831650-2df1c2c3b165?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  padding: 80px 20px;
-  color: white;
-  text-align: center;
-}
+    .preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #fffdf5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
 
-header h1 {
-  font-size: 50px;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
+    header {
+      background: url('https://images.unsplash.com/photo-1612367831650-2df1c2c3b165?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
 
-header p {
-  font-size: 20px;
-  margin-top: 10px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
+    header h1 {
+      font-size: 50px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
 
-.menu {
-  margin: 40px auto;
-  max-width: 800px;
-  padding: 0 20px;
-}
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
 
-.menu-item {
-  background: white;
-  border-radius: 12px;
-  margin: 30px 0;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .menu {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
 
-.menu-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
+    .menu-item {
+      background: white;
+      border-radius: 12px;
+      margin: 30px 0;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.menu-item img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-  transition: transform 0.3s ease;
-}
+    .menu-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
 
-.menu-item img:hover {
-  transform: scale(1.05);
-}
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      transition: transform 0.3s ease;
+    }
 
-.btn {
-  background: #25D366;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 20px;
-  transition: background 0.3s, transform 0.3s;
-}
+    .menu-item img:hover {
+      transform: scale(1.05);
+    }
 
-.btn:hover {
-  background: #20b858;
-  transform: scale(1.05);
-}
+    .btn {
+      background: #25D366;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s, transform 0.3s;
+    }
 
-footer {
-  margin-top: 60px;
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-  padding-bottom: 40px;
-}
+    .btn:hover {
+      background: #20b858;
+      transform: scale(1.05);
+    }
 
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #f39c12;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
+    .reviews, .contact {
+      margin: 60px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
 
-.scroll-top:hover {
-  transform: scale(1.1);
-}
+    .review {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
+    .contact form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .contact button {
+      background: #f39c12;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #e08e0b;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #f39c12;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .scroll-top:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
   <div class="preloader">
     <dotlottie-player src="https://lottie.host/5cdab6a5-c27e-41d7-9d6e-42c0e26a6876/8e8zBaVuyI.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
-  </div>  <header data-aos="fade-down" data-aos-duration="1200">
+  </div>
+
+  <header data-aos="fade-down" data-aos-duration="1200">
     <h1>Rose Samosas</h1>
     <p>Delicious, handmade samosas delivered fresh to your door</p>
-  </header>  <div class="menu">
+  </header>
+
+  <div class="menu">
     <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="100">
       <h2>Beef Samosa – Ksh 30</h2>
       <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/SAMOSA%20INDIA.jpg?raw=true" alt="Beef samosa">
       <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
-    </div><div class="menu-item" data-aos="zoom-in-up" data-aos-delay="200">
-  <h2>Potato Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
-  <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
-</div>
+    </div>
 
-<div class="menu-item" data-aos="zoom-in-up" data-aos-delay="300">
-  <h2>Ndengu Samosa – Ksh 15</h2>
-  <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
-  <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
-</div>
+    <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="200">
+      <h2>Potato Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Samosas%20Recipe%20-%20The%20Recipe%20Critic.jpg?raw=true" alt="Potato samosa">
+      <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
+    </div>
 
-  </div>  <footer data-aos="fade-up" data-aos-delay="400">
+    <div class="menu-item" data-aos="zoom-in-up" data-aos-delay="300">
+      <h2>Ndengu Samosa – Ksh 15</h2>
+      <img src="https://github.com/JEFFK-AFK/ROSE-SAMOSA-WEBSITE/blob/main/image/Nigerian%20snack%F0%9F%98%83%F0%9F%98%83.jpg?raw=true" alt="Ndengu samosa">
+      <a class="btn" href="https://wa.me/254795818644?text=Hi%20Rose!%20I'd%20like%20to%20order%20some%20samosas" target="_blank">Order Now on WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="reviews" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <div class="review">
+      <strong>Mary K.</strong>
+      <p>“Absolutely delicious! The beef samosas are my favorite. Fast delivery too!”</p>
+    </div>
+    <div class="review">
+      <strong>James O.</strong>
+      <p>“Crispy, flavorful, and affordable. Will definitely order again!”</p>
+    </div>
+    <div class="review">
+      <strong>Lucy W.</strong>
+      <p>“Best samosas in Nairobi. The potato ones are addictive!”</p>
+    </div>
+  </div>
+
+  <div class="contact" data-aos="fade-up" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/barakakariuki322@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Contact Form Submission">
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer data-aos="fade-up" data-aos-delay="400">
     <p>&copy; 2025 Rose Samosas. All rights reserved.</p>
-  </footer>  <div class="scroll-top" id="scrollTopBtn" title="Back to top">&#8679;</div>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>  <script>
+  </footer>
+
+  <div class="scroll-top" id="scrollTopBtn" title="Back to top">&#8679;</div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
     AOS.init();
 
     window.addEventListener("load", () => {
@@ -161,5 +248,6 @@ footer {
       scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
     scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  </script></body>
-</html>
+  </script>
+</body>
+  </html>
